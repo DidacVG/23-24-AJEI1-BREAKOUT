@@ -8,8 +8,8 @@ TagManager:
   - Techo
   - Pared
   - Pala
+  - Bloques
   - Pelota
-  - Bloque
   layers:
   - Default
   - TransparentFX

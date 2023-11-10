@@ -31,13 +31,17 @@ public class Pelota : MonoBehaviour
         {
             direccion = new Vector2(direccion.x, -direccion.y);
         }
-        if (collision.gameObject.tag == "Bloque")
+        if (collision.gameObject.tag == "Bloques")
         {
-            direccion = new Vector2(direccion.x, -direccion.y);
+            Vector2 dir = transform.position - collision.transform.position;
+            dir.Normalize();
+            direccion = dir;
         }
         if (collision.gameObject.tag == "Pala")
         {
-            direccion = new Vector2(direccion.x, -direccion.y);
+            Vector2 dir = transform.position - collision.transform.position;
+            dir.Normalize();
+            direccion = dir;
         }
         if (collision.gameObject.tag == "Suelo")
         {
@@ -56,7 +60,7 @@ public class Pelota : MonoBehaviour
         {
             x = -1;
         }
-        float y = -1;
+        float y = Random.Range(-1f, 0);
         direccion = new Vector2(x, y);
     }
 }
