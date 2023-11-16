@@ -8,6 +8,7 @@ public class Pelota : MonoBehaviour
 {
     public float velocidad;
     public Vector2 direccion;
+    public int vidas;
 
     // Start is called before the first frame update
     private void Start()
@@ -45,7 +46,16 @@ public class Pelota : MonoBehaviour
         }
         if (collision.gameObject.tag == "Suelo")
         {
-            Spawn();
+            if (vidas > 0   )
+            {
+                Spawn();
+                vidas = vidas - 1;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
     void Spawn()
