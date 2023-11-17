@@ -10,6 +10,9 @@ TagManager:
   - Pala
   - Bloques
   - Pelota
+  - Powerup1
+  - Powerup2
+  - Powerup3
   layers:
   - Default
   - TransparentFX

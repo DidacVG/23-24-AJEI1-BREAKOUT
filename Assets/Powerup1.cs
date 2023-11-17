@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Powerup1 : MonoBehaviour
+public class Powerups : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,12 +14,5 @@ public class Powerup1 : MonoBehaviour
     void Update()
     {
         
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Pala")
-        {
-            Destroy(gameObject);
-        }
     }
 }

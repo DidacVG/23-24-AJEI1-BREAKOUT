@@ -5,9 +5,8 @@ using UnityEngine.UIElements;
 
 public class Bloque : MonoBehaviour
 {
-    public GameObject Powerup1;
-    public GameObject Powerup2;
-    public GameObject Powerup3;
+    public GameObject[] Powerup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +23,8 @@ public class Bloque : MonoBehaviour
         if (collision.gameObject.tag == "Pelota")
         {
             Destroy(gameObject);
+            int n = Random.Range(0, Powerup.Length);
+            Instantiate(Powerup[n], transform.position, transform.rotation);
         }
     }
 }
