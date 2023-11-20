@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Powerup3 : MonoBehaviour
 {
+    public GameObject Pelota;
     // Start is called before the first frame update
     void Start()
     {

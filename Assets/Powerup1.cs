@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Powerups : MonoBehaviour
 {
+    public GameObject Pelota;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,16 @@ public class Powerups : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Pala")
+        {
+            Instantiate(Pelota, transform.position, transform.rotation);
+        }
+        if (collision.gameObject.tag == "Pala")
+        {
+            Destroy(gameObject);
+        }
     }
 }
